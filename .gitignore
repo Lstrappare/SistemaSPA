@@ -1,0 +1,9 @@
+# Ignorar archivos JSON
+*.json
+
+# Ignorar archivos y directorios específicos
+.replit
+.nix
+vite.config.js
+node_modules/
+replit.nix/
