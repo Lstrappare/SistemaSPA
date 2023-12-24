@@ -30,13 +30,14 @@
     <section class="registro">
       <fieldset>
         <legend><h2>Registrarse</h2></legend>
-        <form>
+        <form id="formulario">
           <label for="nombre">Nombre: </label>
           <input
             type="text"
             id="nombre"
             name="nombre"
             placeholder="Leo Miguel"
+            pattern="[A-Za-zÁÉÍÓÚáéíóúüÜñÑ ]+"
             required
           >
           <label for="apellidoP">Apellido Paterno: </label>
@@ -45,6 +46,7 @@
             id="apellidoP"
             name="apellidoP"
             placeholder="Martinez"
+            pattern="[A-Za-zÁÉÍÓÚáéíóúüÜñÑ ]+"
             required
           >
           <label for="apellidoM">Apellido Materno: </label>
@@ -61,23 +63,43 @@
             id="email"
             name="email"
             placeholder="siempre.relax@gmail.com"
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
             required
           >
-          <label for="emailV">Correo eléctronico</label>
-          <input type="email" id="emailV" name="emailV" required />
-          <label for="telefono">Teléfono: </label>
+          <label for="emailV"> Confirmar correo eléctronico:</label>
+          <input type="email" 
+          id="emailV" 
+          name="emailV" 
+          placeholder="siempre.relax@gmail.com"
+          required
+          >
+          <p id="noMatchC"></p>
+          <label for="telefono">Número de teléfono: </label>
           <input
             type="tel"
             id="telefono"
             name="telefono"
-            placeholder="55-4393-0037"
+            placeholder="55-1234-678 Coloca los guiones"
+            pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}"
             required
           >
-          <label for="telefonoV">Teléfono: </label>
-          <input type="tel" id="telefonoV" name="telefonoV" required />
+          <label for="telefonoV">Confirmar número de teléfono: </label>
+          <input 
+          type="tel" 
+          id="telefonoV" 
+          name="telefonoV"
+          placeholder="Recuerda colocar los guiones" 
+          required
+          >
+          <p id="noMatchT"></p>
           <a href="#" id="abrirT">Leer términos y condiciones.</a>
           <label for="terminos">Aceptas términos y condiciones?</label>
-          <input type="checkbox" id="terminos" name="terminos" required />
+          <input 
+          type="checkbox" 
+          id="terminos" 
+          name="terminos" 
+          required
+          >
           <input type="submit" value="Enviar">
         </form>
       </fieldset>
@@ -97,7 +119,11 @@
               <label>Teléfono:
                 <input type="tel">
               </label>
-              <input type="submit" value="Iniciar sesión">
+              <input 
+              id="enviarR" 
+              type="submit" 
+              value="Iniciar sesión"
+              >
             </form>
         </fieldset>
         </dialog>
@@ -228,7 +254,7 @@
         </li>
         <li>
           <a
-            href="https://drive.google.com/drive/folders/1pBhUkpq8E8WSVLcP1IqVdS9wJg3nHYVc?usp=sharing"
+            href="https://drive.google.com/drive/folders/1XBI8LFywdgY94xcroCEnF5yWQRRcpbFb?usp=sharing"
           >
             Drive
             <img src="img/drive.svg" width="20" height="20">
