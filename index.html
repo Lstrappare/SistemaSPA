@@ -27,9 +27,9 @@
       <h1>SPA.Sientete.Relax</h1>
     </header>
     <!--Formulario-->
-    <section class="regiistro">
+    <section class="registro">
       <fieldset>
-        <legend><h2>Registrarse</h2></legend>
+        <legend><h2>Registrarse</h2>Es rápido y fácil</legend>
         <form>
           <label for="nombre">Nombre: </label>
           <input
@@ -81,7 +81,27 @@
           <input type="submit" value="Enviar">
         </form>
       </fieldset>
-      <a href="#">¿Ya te has registrado?</a>
+      <div class="registrado">
+        <a href="#" id="abrirI">¿Ya te has registrado?</a>
+        <dialog id="iS">
+          <button id="cerrarI">X</button>
+          <fieldset>
+            <legend><h2>Iniciar sesión</h2></legend>
+            <form>
+              <label>Nombre: 
+                <input type="text">
+              </label>
+              <label>Correo eléctronico:
+                <input type="email">
+              </label>
+              <label>Teléfono:
+                <input type="tel">
+              </label>
+              <input type="submit" value="Iniciar sesión">
+            </form>
+        </fieldset>
+        </dialog>
+      </div>
     </section>
     <!--Terminos y Condiciones-->
     <section class="terminosYCondiciones">
@@ -158,9 +178,9 @@
       </dialog>
     </section>
     <!--Boton de preguntas frecuentes-->
-    <section class="dudas">
-      <button id="abrirP">Preguntas frecuentes</button>
-      <dialog id="preguntas">
+    <section class="preguntas">
+      <button id="abrirA">Ayuda</button>
+      <dialog id="ayuda">
         <h2>Preguntas frecuentes.</h2>
         <details>
           <summary>Campos sin capturar.</summary>
@@ -192,7 +212,7 @@
           Revisa bien que hayas capturado todos los datos, he inclusive revisa
           si has aceptado nuestros terminos y condiciones.
         </details>
-        <button id="cerrarP">Cerrar</button>
+        <button id="cerrarA">Cerrar</button>
       </dialog>
     </section>
     <!--Fin de la pagina-->
