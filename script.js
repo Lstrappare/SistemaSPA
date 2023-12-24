@@ -24,3 +24,5 @@ window.abrirI.addEventListener("click", () => {
 window.cerrarI.addEventListener("click", () => {
   window.iS.close();
 });
+
+//Base de Datos
