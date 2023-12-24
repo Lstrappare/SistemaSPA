@@ -1,22 +1,222 @@
 <!doctype html>
-<html>
+<html lang="es">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Replit</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>SPA</title>
+
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#14946E" />
+    <link rel="icon" type="image/ico" href="img/icono.ico" />
+    <meta
+      name="description"
+      content="Un sistema de SPA para el registro de un cliente."
+    />
+    <!-- OPEN GRAPH ToDo-->
+    <meta property="og:image" content="" />
+    <meta
+      property="og:image:alt"
+      content="Un sistema de SPA para el registro de un cliente."
+    />
+    <!--Style-->
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <main>
-      
-    </main>
-    <script type="module" src="script.js"></script>
-    <!--No borres este de abajo plss-->
-    <script
-      src="https://replit.com/public/js/replit-badge-v2.js"
-      theme="dark"
-      position="bottom-right"
-    ></script>
+    <header>
+      <h1>SPA.Sientete.Relax</h1>
+    </header>
+    <section class="regiistro">
+      <fieldset>
+        <legend><h2>Registrarse</h2></legend>
+        <form>
+          <label for="nombre">Nombre: </label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Leo Miguel"
+            required
+          />
+          <label for="apellidoP">Apellido Paterno: </label>
+          <input
+            type="text"
+            id="apellidoP"
+            name="apellidoP"
+            placeholder="Martinez"
+            required
+          />
+          <label for="apellidoM">Apellido Materno: </label>
+          <input
+            type="text"
+            id="apellidoM"
+            name="apellidoM"
+            placeholder="Aguilar"
+            required
+          />
+          <label for="email">Correo eléctronico</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="siempre.relax@gmail.com"
+            required
+          />
+          <label for="emailV">Correo eléctronico</label>
+          <input type="email" id="emailV" name="emailV" required />
+          <label for="telefono">Teléfono: </label>
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            placeholder="55-4393-0037"
+            required
+          />
+          <label for="telefonoV">Teléfono: </label>
+          <input type="tel" id="telefonoV" name="telefonoV" required />
+          <a href="#" id="abrirT">Leer términos y condiciones.</a>
+          <label for="terminos">Aceptas términos y condiciones?</label>
+          <input type="checkbox" id="terminos" name="terminos" required />
+          <input type="submit" value="Enviar" />
+        </form>
+      </fieldset>
+      <a href="#">¿Ya te has registrado?</a>
+    </section>
+    <section class="terminosYCondiciones">
+      <dialog id="ley">
+        <h2>Términos y condiciones.</h2>
+        <p>
+          1. Aceptación de Términos Al acceder y utilizar nuestro sistema de
+          spa, aceptas cumplir con los siguientes términos y condiciones. Si no
+          estás de acuerdo con alguno de estos términos, te instamos a que no
+          utilices nuestros servicios.
+        </p>
+        <p>
+          2. Reservas y Cancelaciones
+          <br />
+          2.1. Reservas: Las reservas de servicios de spa se pueden realizar a
+          través de nuestro sistema en línea o contactando directamente con
+          nosotros. Al realizar una reserva, aceptas proporcionar información
+          precisa y completa.
+          <br />
+          2.2. Cancelaciones: Te pedimos que notifiques cualquier cancelación
+          con la mayor antelación posible. Podemos aplicar políticas de
+          cancelación que pueden implicar cargos en ciertos casos.
+        </p>
+        <p>
+          3. Política de Pagos.
+          <br />
+          3.1. Pagos: Los pagos por servicios se realizarán de acuerdo con
+          nuestras tarifas vigentes. Aceptamos varios métodos de pago, que se
+          detallarán durante el proceso de reserva.
+          <br />
+          3.2. Tarifas y Descuentos: Nos reservamos el derecho de cambiar
+          nuestras tarifas en cualquier momento. Cualquier descuento o promoción
+          estará sujeto a términos y condiciones específicos.
+        </p>
+        <p>
+          4. Política de Privacidad
+          <br />
+          4.1. Información Personal: Al utilizar nuestros servicios, aceptas
+          nuestra política de privacidad que regula el manejo de tu información
+          personal. Consulta nuestra Declaración de Privacidad para obtener más
+          detalles.
+        </p>
+        <p>
+          5. Comportamiento del Cliente
+          <br />
+          5.1. Conducta Adecuada: Esperamos que todos nuestros clientes
+          mantengan un comportamiento respetuoso y adecuado durante su visita al
+          spa. Nos reservamos el derecho de negar servicios a cualquier persona
+          que no cumpla con estas expectativas.
+        </p>
+        <p>
+          6. Cambios en los Términos y Condiciones
+          <br />
+          6.1. Modificaciones: Nos reservamos el derecho de realizar cambios en
+          estos términos y condiciones en cualquier momento. Los cambios serán
+          efectivos inmediatamente después de su publicación en nuestro sistema.
+        </p>
+        <p>
+          7. Limitación de Responsabilidad
+          <br />
+          7.1. Uso bajo su propio riesgo: El uso de nuestros servicios es bajo
+          su propio riesgo. No nos hacemos responsables de lesiones, daños o
+          pérdidas sufridas durante o como resultado del uso de nuestros
+          servicios.
+        </p>
+        <p>
+          8. Ley Aplicable
+          <br />
+          8.1. Jurisdicción: Estos términos y condiciones se rigen por las leyes
+          del lugar donde operamos, y cualquier disputa estará sujeta a la
+          jurisdicción de los tribunales de esa ubicación.
+        </p>
+        <button id="cerrarT">Cerrar</button>
+      </dialog>
+    </section>
+    <section class="dudas">
+      <button id="abrirP">Preguntas frecuentes</button>
+      <dialog id="preguntas">
+        <h2>Preguntas frecuentes.</h2>
+        <details>
+          <summary>Campos sin capturar.</summary>
+          Revisa bien que hayas capturado todos los datos, he inclusive revisa
+          si has aceptado nuestros terminos y condiciones.
+        </details>
+        <details>
+          <summary>Los campos no coinciden.</summary>
+          Revisa bien que hayas capturado todos los datos, he inclusive revisa
+          si has aceptado nuestros terminos y condiciones.
+        </details>
+        <details>
+          <summary>Teléfono y/o Correo ya registrados</summary>
+          Revisa bien que hayas capturado todos los datos, he inclusive revisa
+          si has aceptado nuestros terminos y condiciones.
+        </details>
+        <details>
+          <summary>No he recibido mi correo de confirmación.</summary>
+          Revisa bien que hayas capturado todos los datos, he inclusive revisa
+          si has aceptado nuestros terminos y condiciones.
+        </details>
+        <details>
+          <summary>No he confirmado el correo eléctronico.</summary>
+          Revisa bien que hayas capturado todos los datos, he inclusive revisa
+          si has aceptado nuestros terminos y condiciones.
+        </details>
+        <details>
+          <summary>Ya me he registrado.</summary>
+          Revisa bien que hayas capturado todos los datos, he inclusive revisa
+          si has aceptado nuestros terminos y condiciones.
+        </details>
+        <button id="cerrarP">Cerrar</button>
+      </dialog>
+    </section>
+    <footer>
+      Realizado por Leo Migue y Jose 3CM31 alias los blaks.
+      <br />
+      <ul>
+        <li>
+          <a href="https://github.com/Lstrappare/SistemaSPA.git"
+            >Repositorio en guithub:
+            <img src="img/github.svg" width="20" height="20" />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://drive.google.com/drive/folders/1pBhUkpq8E8WSVLcP1IqVdS9wJg3nHYVc?usp=sharing"
+          >
+            Drive
+            <img src="img/drive.svg" width="20" height="20" />
+          </a>
+        </li>
+      </ul>
+    </footer>
   </body>
+  <script src="script.js"></script>
+  <script
+    src="https://replit.com/public/js/replit-badge-v2.js"
+    theme="dark"
+    position="bottom-right"
+  ></script>
 </html>
