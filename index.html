@@ -27,10 +27,10 @@
       <h1>SPA.Sientete.Relax</h1>
     </header>
     <!--Formulario-->
-    <section class="registro">
+    <section class="registrarse">
       <fieldset>
         <legend><h2>Registrarse</h2></legend>
-        <form action="enviarV.php" method="post" id="registro">
+        <form id="registro">
           <label for="nombre">Nombre: </label>
           <input
             type="text"
@@ -104,9 +104,9 @@
         </form>
       </fieldset>
       <div class="registrado">
-        <a href="#" id="abrirI">¿Ya te has registrado?</a>
-        <dialog id="iS">
-          <button id="cerrarI">X</button>
+        <a href="#" id="abrirIS">¿Ya te has registrado?</a>
+        <dialog id="ventanaIS">
+          <button id="cerrarIS">X</button>
           <fieldset>
             <legend><h2>Iniciar sesión</h2></legend>
             <form>
@@ -120,7 +120,8 @@
                 <input type="tel">
               </label>
               <input 
-              id="enviarR" 
+              id="iniciarS"
+              name="iniciarS" 
               type="submit" 
               value="Iniciar sesión"
               >
@@ -131,7 +132,7 @@
     </section>
     <!--Terminos y Condiciones-->
     <section class="terminosYCondiciones">
-      <dialog id="ley">
+      <dialog id="ventanaT">
         <h2>Términos y condiciones.</h2>
         <p>
           1. Aceptación de Términos Al acceder y utilizar nuestro sistema de
@@ -206,7 +207,7 @@
     <!--Boton de preguntas frecuentes-->
     <section class="preguntas">
       <button id="abrirA">Ayuda</button>
-      <dialog id="ayuda">
+      <dialog id="ventanaA">
         <h2>Preguntas frecuentes.</h2>
         <details>
           <summary>Campos sin capturar.</summary>

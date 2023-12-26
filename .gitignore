@@ -1,5 +1,5 @@
 # Ignorar archivos JSON
-*.json
+package-lock.json
 
 # Ignorar archivos y directorios específicos
 .replit

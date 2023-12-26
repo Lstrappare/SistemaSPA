@@ -1,28 +1,28 @@
-//Preguntas frecuentes
-window.abrirA.addEventListener("click", () => {
-  window.ayuda.showModal();
-});
-
-window.cerrarA.addEventListener("click", () => {
-  window.ayuda.close();
-});
-
 //Terminos y Condiciones
 window.abrirT.addEventListener("click", () => {
-  window.ley.showModal();
+  window.ventanaT.showModal();
 });
 
 window.cerrarT.addEventListener("click", () => {
-  window.ley.close();
+  window.ventanaT.close();
 });
 
 //Iniciar sesión
-window.abrirI.addEventListener("click", () => {
-  window.iS.showModal();
+window.abrirIS.addEventListener("click", () => {
+  window.ventanaIS.showModal();
 });
 
-window.cerrarI.addEventListener("click", () => {
-  window.iS.close();
+window.cerrarIS.addEventListener("click", () => {
+  window.ventanaIS.close();
+});
+
+//Preguntas frecuentes
+window.abrirA.addEventListener("click", () => {
+  window.ventanaA.showModal();
+});
+
+window.cerrarA.addEventListener("click", () => {
+  window.ventanaA.close();
 });
 
 //Token usuario
