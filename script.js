@@ -25,19 +25,27 @@ window.cerrarI.addEventListener("click", () => {
   window.iS.close();
 });
 
+//Token usuario
+function generarToken() {
+  return Math.random().toString(36).substring(2, 10);
+}
 
-formulario.addEventListener('submit', async (e) => {
+const registro = document.getElementById('registro');
+registro.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   // Obtener valores de correo y teléfono
-  var email = document.getElementById('email').value;
-  var emailV = document.getElementById('emailV').value;
-  var telefono = document.getElementById('telefono').value;
-  var telefonoV = document.getElementById('telefonoV').value;
+  let email = document.getElementById('email').value;
+  let emailV = document.getElementById('emailV').value;
+  let telefono = document.getElementById('telefono').value;
+  let telefonoV = document.getElementById('telefonoV').value;
 
   // Reiniciar mensajes de error
   document.getElementById('noMatchC').innerText = '';
   document.getElementById('noMatchT').innerText = '';
+
+  //Asignar token
+  let token = generarToken();
 
   // Validar correo y teléfono
   if (email !== emailV) {
@@ -57,11 +65,12 @@ formulario.addEventListener('submit', async (e) => {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          "Nombre": formulario.nombre.value,
-          "Apellido Paterno": formulario.apellidoP.value,
-          "Apellido Materno": formulario.apellidoM.value,
-          "Correo electronico": formulario.email.value,
-          "Num telefono": formulario.telefono.value
+          "Nombre": registro.nombre.value,
+          "Apellido Paterno": registro.apellidoP.value,
+          "Apellido Materno": registro.apellidoM.value,
+          "Correo electronico": registro.email.value,
+          "Num telefono": registro.telefono.value,
+          "Token": token
         })
       });
 

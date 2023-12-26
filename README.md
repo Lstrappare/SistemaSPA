@@ -2,7 +2,7 @@
 ## Registrar-Cliente. 🙋
 
 >[!NOTE]
-He agregado la base de datos, y las validaciones
+He agregado el sistema para la validación de correo.
 
 >[!TIP]
 El tema de los ID la mayoria esta en el form, y estan escritos de esta manera, apellidoP = apellido paterno :D.
