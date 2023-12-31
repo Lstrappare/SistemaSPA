@@ -31,32 +31,37 @@
       <fieldset>
         <legend><h2>Registrarse</h2></legend>
         <form id="registro">
-          <label for="nombre">Nombre: </label>
-          <input
-            type="text"
-            id="nombre"
-            name="nombre"
-            placeholder="Leo Miguel"
-            pattern="[A-Za-zÁÉÍÓÚáéíóúüÜñÑ ]+"
-            required
-          >
-          <label for="apellidoP">Apellido Paterno: </label>
-          <input
-            type="text"
-            id="apellidoP"
-            name="apellidoP"
-            placeholder="Martinez"
-            pattern="[A-Za-zÁÉÍÓÚáéíóúüÜñÑ ]+"
-            required
-          >
-          <label for="apellidoM">Apellido Materno: </label>
-          <input
-            type="text"
-            id="apellidoM"
-            name="apellidoM"
-            placeholder="Aguilar"
-            required
-          >
+          <div class="campo">
+            <label for="nombre">Nombre: </label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Leo Miguel"
+              pattern="[A-Za-zÁÉÍÓÚáéíóúüÜñÑ ]+"
+              required
+            >
+          </div>
+          <div class="campo">
+            <label for="apellidoP">Apellido Paterno: </label>
+            <input
+              type="text"
+              id="apellidoP"
+              name="apellidoP"
+              placeholder="Martinez"
+              pattern="[A-Za-zÁÉÍÓÚáéíóúüÜñÑ ]+"
+              required
+            >
+          </div>
+          <div class="campo">
+            <label for="apellidoM">Apellido Materno: </label>
+            <input
+              type="text"
+              id="apellidoM"
+              name="apellidoM"
+              placeholder="Aguilar"
+              required
+            >
           <label for="email">Correo eléctronico</label>
           <input
             type="email"
@@ -76,13 +81,13 @@
           <p id="noMatchC"></p>
           <label for="telefono">Número de teléfono: </label>
           <input
-            type="tel"
-            id="telefono"
-            name="telefono"
-            placeholder="55-1234-678 Coloca los guiones"
-            pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}"
-            required
-          >
+          type="tel"
+          id="telefono"
+          name="telefono"
+          placeholder="55-1234-678 Coloca los guiones"
+          pattern="(\d{8}|\d{2}-\d{4}-\d{4}|\d{10})"
+          required
+        >        
           <label for="telefonoV">Confirmar número de teléfono: </label>
           <input 
           type="tel" 
@@ -244,7 +249,7 @@
     </section>
     <!--Fin de la pagina-->
     <footer>
-      Realizado por Leo Migue y Jose 3CM31 alias los blaks.
+      Realizado por Leonardo Martinez y  Jose Cisneros 3CM31.
       <br>
       <ul>
         <li>

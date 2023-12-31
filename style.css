@@ -1,3 +1,136 @@
 #noMatchC, #noMatchT, #haValidado {
     color: red;
 }
+
+/* Resetear estilos por defecto para la consistencia del diseño */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos para el cuerpo de la página */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  /* Estilos para el encabezado */
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    color: #14946E;
+  }
+  
+  /* Estilos para el formulario de registro */
+  .registrarse {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Cambia este valor según tu diseño */
+    margin: 0 auto; /* Esto centra horizontalmente */
+  }
+  
+  legend {
+    font-weight: bold;
+    text-align: center; /* Centra el contenido */
+    width: 100%; /* Asegura que el ancho sea del 100% */
+    margin-bottom: 20px; /* Espaciado inferior */
+  }
+  
+  
+  legend {
+    font-weight: bold;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  input[type='text'],
+  input[type='email'],
+  input[type='tel'],
+  input[type='submit'],
+  input[type='checkbox'] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  input[type='submit'] {
+    background-color: #14946E;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  input[type='submit']:hover {
+    background-color: #0e6f53;
+  }
+  
+  /* Estilos para el pie de página */
+  footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  a {
+    color: #14946E;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+/* Estilos para el contenedor de cada par título-campo */
+.campo {
+    max-width: 300px; /* Ancho máximo ajustable */
+    margin: 8px auto; /* Margen automático para centrar */
+    text-align: center; /* Centrar el contenido */
+  }
+  
+  /* Estilos para los títulos */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Estilos para los campos de entrada */
+  input[type='text'],
+  input[type='email'],
+  input[type='tel'],
+  input[type='submit'],
+  input[type='checkbox'] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Incluir el padding y border en el ancho */
+  }
+  
+  

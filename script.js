@@ -88,3 +88,53 @@ registro.addEventListener('submit', async (e) => {
 });
 
 
+// TOKEN, aun no funciona pero es la logiaca!  
+const express = require('express');
+const nodemailer = require('nodemailer');
+
+const app = express();
+app.use(express.json());
+
+// Configurar transporte de correo
+const transporter = nodemailer.createTransport({
+  // Configuración del servicio de correo electrónico (Gmail, Outlook, etc.)
+  service: 'gmail',
+  auth: {
+    user: 'tucorreo@gmail.com',
+    pass: 'tupassword',
+  },
+});
+
+// Ruta para manejar el envío del formulario
+app.post('/registro', (req, res) => {
+  // Obtener los datos del formulario desde el cuerpo de la solicitud
+  const { nombre, email } = req.body;
+
+  // Generar un token único (puedes usar tu función generarToken aquí)
+  const token = Math.random().toString(36).substring(2, 10);
+
+  // Guardar el token y los datos del usuario en la base de datos (aquí deberías conectar con tu base de datos y almacenar los datos)
+
+  // Enviar el correo electrónico con el token de confirmación
+  transporter.sendMail({
+    from: 'tucorreo@gmail.com',
+    to: email,
+    subject: 'Confirmación de registro',
+    text: `Hola ${nombre}, gracias por registrarte. Tu token de confirmación es: ${token}.`,
+    // Puedes personalizar el cuerpo del correo con instrucciones, enlaces, etc.
+  }, (error, info) => {
+    if (error) {
+      console.log(error);
+      res.status(500).send('Error al enviar el correo de confirmación');
+    } else {
+      console.log('Correo de confirmación enviado: ' + info.response);
+      res.status(200).send('Correo de confirmación enviado');
+    }
+  });
+});
+
+app.listen(3000, () => {
+  console.log('Servidor iniciado en el puerto 3000');
+});
+
+
