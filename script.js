@@ -88,7 +88,7 @@ registro.addEventListener('submit', async (e) => {
 });
 
 
-// TOKEN, aun no funciona pero es la logiaca!  
+/* TOKEN, aun no funciona pero es la logiaca!  
 const express = require('express');
 const nodemailer = require('nodemailer');
 
@@ -136,5 +136,5 @@ app.post('/registro', (req, res) => {
 app.listen(3000, () => {
   console.log('Servidor iniciado en el puerto 3000');
 });
-
+*/
 
