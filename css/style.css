@@ -1,6 +1,6 @@
 /* Paleta de colores */
 :root{
-  --colorPrimario:#255c7b; 
+  --colorPrimario:#345f77; 
   --colorSecundario:#93e0ef;
   --colorFondo:#eff8e1;
   --colorElementos:#b7d9b6;
@@ -78,8 +78,8 @@ input {
 }
 
 a{
-  color: var(--colorNeutro);
   text-decoration: none;
+  color: var(--colorNeutro);
 }
 
 a:hover{
@@ -138,7 +138,7 @@ dialog{
   height: 1.5rem;
 }
 
-/*Computadora*/
+/*Pantallas grandes*/
 @media (min-width: 768px) {
   .flex{
     flex-direction: row;
@@ -191,8 +191,18 @@ ul{
 }
   
 footer a {
+  
   color: var(--colorElementos);
   display: flex;
   justify-content: center;
 }
-  
+
+/*Fondo de pantalla*/
+.fondo {
+  z-index: -1;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
