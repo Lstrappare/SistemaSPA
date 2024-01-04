@@ -2,6 +2,6 @@
 ## Registrar-Cliente. 🙋
 
 >[!IMPORTANT]
->Falta escribir correctamente las preguntas frecuentes.
+><p>SI necesitas hacer test con los mails puedes comentar con <strong>'/* */'</strong></p>
 
 
