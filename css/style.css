@@ -104,7 +104,9 @@ input {
   max-width: 30rem;
 }
 
-#noMatchC, #noMatchT, #savedT, #savedC{
+/* Mensajes de error */
+#noMatchC, #noMatchT, #savedT, #savedC,
+#noSavedN, #noSavedC, #noSavedT{
   color: var(--error);
 }
 
@@ -138,7 +140,7 @@ dialog{
   padding: 1rem;
   font-family: 'Crimson Text', serif;
   width: 14.4rem;
-  max-height: 25rem;
+  max-height: 31rem;
   top: 50%;
   left: 50%;
   transform: translate(-57%, -50%);

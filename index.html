@@ -137,15 +137,18 @@
               </div>
               <fieldset>
                 <legend><h2>Iniciar sesión</h2></legend>
-                <form>
-                  <label>Nombre: 
-                    <input type="text">
+                <form id="formIniciarSesion">
+                  <p id="noSavedN"></p>
+                  <label for="nombreIS">Nombre: 
+                    <input type="text" id="nombreIS" name="nombreIS" required>
                   </label>
-                  <label>Correo eléctronico:
-                    <input type="email">
+                  <p id="noSavedC"></p>
+                  <label for="emailIS">Correo eléctronico:
+                    <input type="email" id="emailIS" name="emailIS" required>
                   </label>
-                  <label>Teléfono:
-                    <input type="tel">
+                  <p id="noSavedT"></p>
+                  <label for="telefonoIS">Teléfono:
+                    <input type="tel" id="telefonoIS" name="telefonoIS" required>
                   </label>
                   <input 
                   id="iniciarS"
