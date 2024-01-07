@@ -25,11 +25,14 @@ document.addEventListener('DOMContentLoaded', function () {
   window.cerrarA.addEventListener("click", () => {
     window.ventanaA.close();
   });
-  
+
   //Base de datos
   const registro = document.getElementById('registro');
   registro.addEventListener('submit', async (e) => {
     e.preventDefault();
+
+     // Mostrar pantalla de carga
+     document.getElementById('loader').style.display = 'flex';
 
     // Obtener de correo y teléfono
     let email = document.getElementById('email').value;
@@ -50,12 +53,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //Asignar token
     let token = generarToken();
+    //Local Storage
+    localStorage.setItem('token', token);
 
     // Mensaje Correo y/o Teléfono no coincide
     if (email !== emailV) {
       document.getElementById('noMatchC').innerText = 'Los correos no coinciden, vuelve a verificarlos.';
+      document.getElementById('loader').style.display = 'none';
     } else if (telefono !== telefonoV) {
       document.getElementById('noMatchT').innerText = 'El número de teléfono no coincide, vuelve a verificarlo.';
+      document.getElementById('loader').style.display = 'none';
     }
 
     //Email y numero de telefonos ya registrados
@@ -94,10 +101,12 @@ document.addEventListener('DOMContentLoaded', function () {
       //Mensajes de Correo y/o Teléfono ya existentes
       if (await verificarExistencia(email, '')) {
         document.getElementById('savedC').innerText = 'El Correo eléctronico ya se ha registrado.';
+        document.getElementById('loader').style.display = 'none';
         return;
       }
       if (await verificarExistencia('', telefono)) {
         document.getElementById('savedT').innerText = 'El número de teléfono ya se ha registrado.';
+        document.getElementById('loader').style.display = 'none';
         return;
       }
 
@@ -120,7 +129,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         if (response.ok) {
-          alert('Registro exitoso');
           window.location.href = 'spa.html';
         } else {
           alert('Hubo un problema, verifica los campos.');
@@ -128,6 +136,9 @@ document.addEventListener('DOMContentLoaded', function () {
       } catch (error) {
         console.error('Error al enviar el formulario:', error);
         alert('Hubo un error al enviar el formulario');
+      } finally {
+        // Ocultar pantalla de carga después de enviar el formulario (incluso si hay un error)
+        document.getElementById('loader').style.display = 'none';
       }
     }
   });
@@ -142,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const emailIS = document.getElementById('emailIS').value;
     const telefonoIS = document.getElementById('telefonoIS').value;
 
-    // Obtener datos de la API (GET request)
+    // Obtener datos de la API 
     const dataFromAPI = await obtenerDatosDesdeAPI();
 
     // Validar nombre, correo y número de teléfono
@@ -173,7 +184,8 @@ document.addEventListener('DOMContentLoaded', function () {
       window.location.href = 'spa.html';
     }
   });
-  // API inicio de sesion
+
+  // Recolectar datos para inicio de sesion
   async function obtenerDatosDesdeAPI() {
     try {
       const response = await fetch('https://sheet.best/api/sheets/ec0ee7dc-57a0-44d8-b14d-1f006afbbe58', {
@@ -197,55 +209,3 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   } 
 });
-
-
-/* TOKEN, aun no funciona pero es la logiaca!  
-const express = require('express');
-const nodemailer = require('nodemailer');
-
-const app = express();
-app.use(express.json());
-
-// Configurar transporte de correo
-const transporter = nodemailer.createTransport({
-  // Configuración del servicio de correo electrónico (Gmail, Outlook, etc.)
-  service: 'gmail',
-  auth: {
-    user: 'tucorreo@gmail.com',
-    pass: 'tupassword',
-  },
-});
-
-// Ruta para manejar el envío del formulario
-app.post('/registro', (req, res) => {
-  // Obtener los datos del formulario desde el cuerpo de la solicitud
-  const { nombre, email } = req.body;
-
-  // Generar un token único (puedes usar tu función generarToken aquí)
-  const token = Math.random().toString(36).substring(2, 10);
-
-  // Guardar el token y los datos del usuario en la base de datos (aquí deberías conectar con tu base de datos y almacenar los datos)
-
-  // Enviar el correo electrónico con el token de confirmación
-  transporter.sendMail({
-    from: 'tucorreo@gmail.com',
-    to: email,
-    subject: 'Confirmación de registro',
-    text: `Hola ${nombre}, gracias por registrarte. Tu token de confirmación es: ${token}.`,
-    // Puedes personalizar el cuerpo del correo con instrucciones, enlaces, etc.
-  }, (error, info) => {
-    if (error) {
-      console.log(error);
-      res.status(500).send('Error al enviar el correo de confirmación');
-    } else {
-      console.log('Correo de confirmación enviado: ' + info.response);
-      res.status(200).send('Correo de confirmación enviado');
-    }
-  });
-});
-
-app.listen(3000, () => {
-  console.log('Servidor iniciado en el puerto 3000');
-});
-*/
-

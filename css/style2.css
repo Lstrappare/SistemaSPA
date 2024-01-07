@@ -1,0 +1,103 @@
+/* Paleta de colores */
+:root{
+    --colorPrimario:#345f77; 
+    --colorSecundario:#93e0ef;
+    --colorFondo:#eff8e1;
+    --colorElementos:#b7d9b6;
+    --colorNeutro:#447551;
+    --error: #ff0000;
+    --negro: #000;
+    --blanco: #fff;
+  }
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #93e0ef33;
+    font-size: 1rem;
+    padding: 1rem;
+    width: 100%;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1rem;
+    text-align: center;
+    color: var(--colorElementos);
+    margin: 1rem 1rem 0 1rem;
+}
+
+h2 a{ 
+    font-size: 1.1rem;
+    color: var(--colorElementos);
+}
+
+@media (min-width: 768px) {
+    h2 a {
+        font-size: 1.5rem;
+    }
+}
+
+.registrarse{
+    margin: 0 2rem;
+    text-align: initial;
+}
+
+ul {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+}
+  
+li { 
+    margin: 5px 0;
+}
+  
+.registrarse ul li::before {
+    content: '\1F337'; 
+    display: inline-block;
+    margin-right: 5px; 
+}
+
+input {
+    margin: .2rem;
+}
+
+dialog {
+    font-family: 'Diphylleia', serif;
+}
+
+#abrirVT {
+    color: var(--colorPrimario);
+    text-decoration: underline;
+}
+
+#abrirVT:hover {
+    color: var(--colorElementos);
+}
+
+#cerrarVT {
+    width: 1.2rem;
+    background-color: var(--colorNeutro);
+    color: var(--colorElementos);
+    border-radius: 4px;
+    border: 0;
+    padding: .2rem;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+}
+
+#cerrarVT:hover {
+    background-color: var(--colorElementos);
+    color: var(--colorNeutro);
+}
+
+footer {
+    width: 90%;
+}

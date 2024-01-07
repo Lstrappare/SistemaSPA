@@ -132,7 +132,7 @@
               </div>
               <!--Inicio de Sesión-->
             <dialog id="ventanaIS">
-              <div class="cerrar">
+              <div class="contBoton">
                 <button id="cerrarIS">X</button>
               </div>
               <fieldset>
@@ -140,15 +140,21 @@
                 <form id="formIniciarSesion">
                   <p id="noSavedN"></p>
                   <label for="nombreIS">Nombre: 
-                    <input type="text" id="nombreIS" name="nombreIS" required>
+                    <div class="campo">
+                      <input type="text" id="nombreIS" name="nombreIS" required>
+                    </div>
                   </label>
                   <p id="noSavedC"></p>
                   <label for="emailIS">Correo eléctronico:
-                    <input type="email" id="emailIS" name="emailIS" required>
-                  </label>
+                    <div class="campo">
+                      <input type="email" id="emailIS" name="emailIS" required>
+                    </div>
+                    </label>
                   <p id="noSavedT"></p>
                   <label for="telefonoIS">Teléfono:
-                    <input type="tel" id="telefonoIS" name="telefonoIS" required>
+                    <div class="campo">
+                      <input type="tel" id="telefonoIS" name="telefonoIS" required>
+                    </div>
                   </label>
                   <input 
                   id="iniciarS"
@@ -234,7 +240,9 @@
             del lugar donde operamos, y cualquier disputa estará sujeta a la
             jurisdicción de los tribunales de esa ubicación.
           </p>
-        <div class="cerrar"><button id="cerrarT">Cerrar</button></div>
+        <div class="contBoton">
+          <button id="cerrarT">Cerrar</button>
+        </div>
         </dialog>
       </section>
       <!--Boton de Ayuda-->
@@ -243,42 +251,49 @@
           <h2>Preguntas frecuentes.</h2>
           <details>
             <summary>Campos sin capturar.</summary>
-            Revisa bien que hayas capturado todos los datos, he inclusive revisa
-            si has aceptado nuestros terminos y condiciones.
+            Asegúrate de completar todos los campos obligatorios del formulario de registro.
+            Revisa que cada campo tenga la información solicitada, como nombre, apellido, 
+            correo electrónico, teléfono, y que hayas aceptado los términos y condiciones.
           </details>
           <details>
             <summary>Los campos no coinciden.</summary>
-            Revisa bien que hayas capturado todos los datos, he inclusive revisa
-            si has aceptado nuestros terminos y condiciones.
+            Verifica que la información ingresada en los campos de confirmación 
+            (como correo electrónico y teléfono) sea idéntica a la información 
+            proporcionada inicialmente. Esto incluye verificar que los 
+            correos electrónicos y números de teléfono sean iguales en los campos de confirmación 
+            y que sigan el mismo formato.
+          </details>
+          <details>
+            <summary>Formato del Correo eléctronico.</summary>
+            Recuerda siempre incluir el "@" para que puedas registrar tu correo
+          </details>
+          <details>
+            <summary>Formato del número de teléfono.</summary>
+            Recuerda escribir tu número de teléfono sin espacios, ni guiones.
+            También recuerda que solo se admiten números de teléfonos de 10 dígitos.
           </details>
           <details>
             <summary>Teléfono y/o Correo ya registrados</summary>
-            Revisa bien que hayas capturado todos los datos, he inclusive revisa
-            si has aceptado nuestros terminos y condiciones.
-          </details>
-          <details>
-            <summary>No he recibido mi correo de confirmación.</summary>
-            Revisa bien que hayas capturado todos los datos, he inclusive revisa
-            si has aceptado nuestros terminos y condiciones.
-          </details>
-          <details>
-            <summary>No he confirmado el correo eléctronico.</summary>
-            Revisa bien que hayas capturado todos los datos, he inclusive revisa
-            si has aceptado nuestros terminos y condiciones.
+            Si recibes este mensaje, es posible que el correo electrónico o el 
+            número de teléfono que estás ingresando ya estén asociados con una 
+            cuenta existente en el sistema. Intenta usar diferentes credenciales 
+            o verifica si ya te has registrado previamente con esa información.
           </details>
           <details>
             <summary>Ya me he registrado.</summary>
-            Revisa bien que hayas capturado todos los datos, he inclusive revisa
-            si has aceptado nuestros terminos y condiciones.
-          </details>
-          <button id="cerrarA">Cerrar</button>
+            Si recibes este mensaje y estás seguro de haber completado 
+            el registro anteriormente, intenta iniciar sesión en lugar de volver a registrarte. 
+            Utiliza la opción de iniciar sesión con las credenciales que proporcionaste previamente.
+          </details>  
+          <div class="contBoton">
+            <button id="cerrarA">Cerrar</button>
+          </div>
         </dialog>
       </section>
     </div>
     <!--Fin de la pagina-->
     <footer>
       <p class="creditos">Realizado por Leonardo Martinez y  Jose Cisneros de la secuencia 3CM31.</p>
-      <br>
       <ul>
         <li>
           <a href="https://github.com/Lstrappare/SistemaSPA.git"
@@ -304,6 +319,11 @@
         </li>
       </ul>
     </footer>
+
+    <!-- Agrega este div para la pantalla de carga -->
+    <div id="loader" class="loader-container">
+      <div class="loader"></div>
+    </div>
     <svg class="fondo" version="1.1" xmlns="http://www.w3.org/2000/svg"
 		  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
       <defs>

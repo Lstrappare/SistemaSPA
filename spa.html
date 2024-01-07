@@ -13,24 +13,141 @@
     <link rel="icon" type="image/ico" href="img/icono.ico">
     <!--Style-->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <!--Tipografía-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Diphylleia&display=swap" rel="stylesheet">
   </head>
-<body>
-    <h1>Hasta aqui acabo el registro! :D</h1>
-    <h3>Si deseas regresar a la pagina puedes dar
-    <a href="index.html">click aqui</a>
+<body><header>
+    <h1>Hasta aquí acabo el registro! :D</h1></header>
+    <h2>
+      <a href="index.html">
+        Si deseas regresar a la página inicial, puedes dar 'click' aquí.
+      </a>
+    </h2>
     <br>
-    Puedes poner a prueba:
-    </h3>
+    <div class="registrarse">
+    <h3>Puedes poner a prueba: </h3>
     <ul>
-      <li>Registrar correo y télefono ya registrados.</li>
-      <li>Dejar campos en blanco.</li>
+      <li>Registrar correo y télefono ya registrados.</li> 
+      <li>Ingresar en los campos de validación, teléfonos o correos diferentes.</li>
+      <li>No cumplir con el formato de captura.</li>
+      <li>Dejar campos vacíos.</li>
       <li>Iniciar sesión.</li>
-      <li>Campos de validación diferentes</li>
-      <li><strong>Ingresa</strong> el token que te mandamos por mail y <strong style="color: red">Correo válidado</strong> aparecerá en verde</li>
-      <form>
-        <input id="correoValidado" type="text">
-        <input type="submit" name="correoValido" id="submit" value="enviar">
+      <li>
+        Ingresa a "Ver Token", copia tu token y pégalo.
+        Una vez hecho esto, "Cuenta validada" aparecerá en verde.
+        
+      </li><a id="abrirVT">Ver Token</a>
+      <li>
+        Puedes refrescar la pagina para hacer más pruebas con el token.
+      </li>
+      <li>
+        Estado de la cuenta: <strong style="color: red" id="cuentaValidada">Cuenta no validada</strong>
+      </li>
+      <form id="validarToken">
+        <label for="inputToken">Ingresa, aquí tu token:</label>
+        <input id="inputToken" type="text" placeholder="Ingresa tu Token" required>
+        <p id="errorT"></p>
+        <input type="submit" id="enviarT" name="correoValido" value="Validar Cuenta" class="enviar">
       </form>
     </ul>
+  </div>
+  <!--Ventana ver token-->
+  <dialog id="ventanaVT">
+    <button id="cerrarVT">X</button>
+    <h3>Token: </h3> 
+    <h3 id="tokenParagraph"></h3>
+    <p>
+      Este token único, puede ser entregado a través de servicios de correo electrónico 
+      como PHPMailer, SendGrid, Mailgun o SMTP, utilizando servidores SMTP y APIs, y 
+      aprovechando frameworks como Node.js, React, etc. 
+    </p>
+    <p>
+      Para la entrega mediante mensajes de 
+      texto, Twilio, Plivo y Nexmo son opciones útiles, ya que facilitan tanto el envío 
+      de mensajes de texto como de llamadas desde la aplicación.
+    </p>
+  </dialog>
+  <footer>
+    <p class="creditos">Realizado por Leonardo Martinez y  Jose Cisneros de la secuencia 3CM31.</p>
+    <ul>
+      <li>
+        <a href="https://github.com/Lstrappare/SistemaSPA.git"
+          >Repositorio en guithub
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github-filled" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M5.315 2.1c.791 -.113 1.9 .145 3.333 .966l.272 .161l.16 .1l.397 -.083a13.3 13.3 0 0 1 4.59 -.08l.456 .08l.396 .083l.161 -.1c1.385 -.84 2.487 -1.17 3.322 -1.148l.164 .008l.147 .017l.076 .014l.05 .011l.144 .047a1 1 0 0 1 .53 .514a5.2 5.2 0 0 1 .397 2.91l-.047 .267l-.046 .196l.123 .163c.574 .795 .93 1.728 1.03 2.707l.023 .295l.007 .272c0 3.855 -1.659 5.883 -4.644 6.68l-.245 .061l-.132 .029l.014 .161l.008 .157l.004 .365l-.002 .213l-.003 3.834a1 1 0 0 1 -.883 .993l-.117 .007h-6a1 1 0 0 1 -.993 -.883l-.007 -.117v-.734c-1.818 .26 -3.03 -.424 -4.11 -1.878l-.535 -.766c-.28 -.396 -.455 -.579 -.589 -.644l-.048 -.019a1 1 0 0 1 .564 -1.918c.642 .188 1.074 .568 1.57 1.239l.538 .769c.76 1.079 1.36 1.459 2.609 1.191l.001 -.678l-.018 -.168a5.03 5.03 0 0 1 -.021 -.824l.017 -.185l.019 -.12l-.108 -.024c-2.976 -.71 -4.703 -2.573 -4.875 -6.139l-.01 -.31l-.004 -.292a5.6 5.6 0 0 1 .908 -3.051l.152 -.222l.122 -.163l-.045 -.196a5.2 5.2 0 0 1 .145 -2.642l.1 -.282l.106 -.253a1 1 0 0 1 .529 -.514l.144 -.047l.154 -.03z" stroke-width="0" fill="currentColor" />
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://drive.google.com/drive/folders/1XBI8LFywdgY94xcroCEnF5yWQRRcpbFb?usp=sharing"
+        >
+          Drive
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-google-drive" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#bce9ba" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M12 10l-6 10l-3 -5l6 -10z" />
+            <path d="M9 15h12l-3 5h-12" />
+            <path d="M15 15l-6 -10h6l6 10z" />
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </footer>
+    <svg class="fondo" version="1.1" xmlns="http://www.w3.org/2000/svg"
+		  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+      <defs>
+        <linearGradient id="bg">
+          <stop offset="0%" style="stop-color:rgba(130, 201, 249, 0.06)"></stop>
+          <stop offset="100%" style="stop-color:#93e0efb7"></stop>
+          <stop offset="50%" style="stop-color:#447551"></stop>
+        </linearGradient>
+        <path id="wave" fill="url(#bg)" d="M-363.852,502.589c0,0,236.988-41.997,505.475,0
+        s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z" />
+      </defs>
+      <g>
+        <use xlink:href='#wave' opacity=".3">
+          <animateTransform
+            attributeName="transform"
+            attributeType="XML"
+            type="translate"
+            dur="10s"
+            calcMode="spline"
+            values="270 230; -334 180; 270 230"
+            keyTimes="0; .5; 1"
+            keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+            repeatCount="indefinite" />
+        </use>
+        <use xlink:href='#wave' opacity=".6">
+          <animateTransform
+            attributeName="transform"
+            attributeType="XML"
+            type="translate"
+            dur="8s"
+            calcMode="spline"
+            values="-270 230;243 220;-270 230"
+            keyTimes="0; .6; 1"
+            keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+            repeatCount="indefinite" />
+        </use>
+        <use xlink:href='#wave' opacty=".9">
+          <animateTransform
+            attributeName="transform"
+            attributeType="XML"
+            type="translate"
+            dur="6s"
+            calcMode="spline"
+            values="0 230;-140 200;0 230"
+            keyTimes="0; .4; 1"
+            keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+            repeatCount="indefinite" />
+        </use>
+      </g>
+    </svg>
+    <script src="script.js"></script>
+    <script src="script2.js"></script>
 </body>
 </html>
