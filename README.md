@@ -1,6 +1,8 @@
 # Sistema: SPA. ✨
 ## Registrar-Cliente. 🙋
-### [Sitio Web 🌐 <p align="center"> <img src="https://github.com/Lstrappare/SistemaSPA/assets/119477560/433c24cd-60e2-47cc-b01b-45431da37019" /> </p>](https://lstrappare.github.io/SistemaSPA/)
+### [Sitio Web 🌐](https://lstrappare.github.io/SistemaSPA/)
+
+<p align="center"> <img src="https://github.com/Lstrappare/SistemaSPA/assets/119477560/433c24cd-60e2-47cc-b01b-45431da37019" /> </p>
 
 ## Descripción del Proyecto
 
