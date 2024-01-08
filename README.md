@@ -41,7 +41,7 @@ SPA.Sientete.Relax es un sistema de aplicación de una sola página (SPA) diseñ
 
 ## Créditos y Enlaces
 
-- Este proyecto fue realizado por Francisco Leonardo Martínez Nicolás y José Manuel Cisneros Valero como parte de la secuencia 3CM31.
+- Este proyecto fue realizado por el equipo #8 Francisco Leonardo Martínez Nicolás y José Manuel Cisneros Valero como parte de la secuencia 3CM31.
 
 - Repositorio en GitHub: [SPA.Sientete.Relax en GitHub](https://github.com/Lstrappare/SistemaSPA.git)
 
