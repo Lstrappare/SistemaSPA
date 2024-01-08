@@ -45,7 +45,7 @@ SPA.Sientete.Relax es un sistema de aplicación de una sola página (SPA) diseñ
 
 - Repositorio en GitHub: [SPA.Sientete.Relax en GitHub](https://github.com/Lstrappare/SistemaSPA.git)
 
-- Enlace a Google Drive: [Recursos y Archivos](https://drive.google.com/drive/folders/1XBI8LFywdgY94xcroCEnF5yWQRRcpbFb?usp=sharing)
+- Enlace a Google Drive: [Recursos y Archivos](https://drive.google.com/drive/folders/1pBhUkpq8E8WSVLcP1IqVdS9wJg3nHYVc)
 
 - Fondo Utilizado: [codepen.io](https://codepen.io/kinglisky/pen/pejopv)
   
