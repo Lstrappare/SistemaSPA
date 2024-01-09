@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       //Mensajes de Correo y/o Teléfono ya existentes
       if (await verificarExistencia(email, '')) {
-        document.getElementById('savedC').innerText = 'El Correo eléctronico ya se ha registrado.';
+        document.getElementById('savedC').innerText = 'El Correo electrónico ya se ha registrado.';
         document.getElementById('loader').style.display = 'none';
         return;
       }
